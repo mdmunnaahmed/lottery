@@ -20,7 +20,7 @@
   padding: 12px 25px;
 }
 .form--control[readonly] {
-  background: rgba($primary-color, .05)  !important;
+  background: rgba($primary, .05)  !important;
   &:focus {
       border-color: $border-color;
   }

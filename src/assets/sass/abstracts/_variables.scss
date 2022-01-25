@@ -1,20 +1,19 @@
 // Font-family
-$heading: 'Josefin Sans', sans-serif;
-$body:  'Open Sans', sans-serif;
+$heading: 'Jost', sans-serif;
+$body:  'Jost', sans-serif;
 
-//Description line height
-$lh-p: 1.7;
-$lh-h: 1.3;
 $fs-base: 16px;
 
 // Title Color
 $title-color: rgb(33, 37, 56);
 
 // Essential Colors
-$base-color: #276bff;
- 
-$primary-color: #120f29;
-$secondary-color: #78818A;
+$base-color: #FFA500;
+$gradient-one: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
+$gradient-two: linear-gradient(0deg, #F7553F 20%, #F68738 100%);
+
+$accent-color: #FF03FC;
+
 
 $body-color : rgb(77, 70, 70);
 $border-color: rgba(14, 14, 14, 0.1);
@@ -31,6 +30,8 @@ $theme-four: #F6A200;
 $theme-five: #09389E;
 
 // color variable for Bootstrap
+$primary: #7367f0;
+$secondary: #868e96;
 $success: #28c76f;
 $danger: #ea5455;
 $warning: #ff9f43;

@@ -1,0 +1,135 @@
+.banner-section {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    @include breakpoint(max-xxl) {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(max-xl) {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(max-lg) {
+        padding-top: 220px;
+        padding-bottom: 150px;
+    }
+    @include breakpoint(max-sm) {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    &::before {
+        @extend %position-set;
+        background: $gradient-one;
+        opacity: .35;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.banner-content {
+    max-width: 650px;
+    width: 100%;
+    @include breakpoint(max-xl) {
+        max-width: 550px;
+    }
+    @include breakpoint(max-lg) {
+        max-width: 550px;
+        text-align: center;
+        margin: 0 auto 60px;
+    }
+    .title {
+        color: $white;
+        margin-bottom: 25px;
+        @include breakpoint(max-lg) {
+            @include breakpoint(md) {
+                font-size: 48px;
+            }
+        }
+    }
+    p {
+        color: $white;
+        font-size: 26px;
+        @include breakpoint(max-xl) {
+            font-size: 24px;
+        }
+        @include breakpoint(max-lg) {
+            font-size: 22px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 20px;
+        }
+        @include breakpoint(max-xs) {
+            font-size: 18px;
+        }
+    }
+    .video-button {
+        margin-left: 25px;
+    }
+}
+.banner-thumb {
+    width: calc(100% - 650px);
+    position: relative;
+    @include breakpoint(xxl) {
+        padding-left: 80px;
+    }
+    @include breakpoint(max-lg) {
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .shape1 {
+        bottom: 0;
+        right: -50px;
+        @include breakpoint(max-xxl) {
+            right: -200px;
+            max-width: 600px;
+            img {
+                width: 100%;
+            }
+        }
+        @include breakpoint(max-lg) {
+            right: 0;
+            bottom: 50px;
+            max-width: 450px;
+        }
+    }
+}
+
+.coins {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: -1;
+    @include breakpoint(max-xxl) {
+        right: -100px;
+        top: 70px;
+    }
+    @include breakpoint(max-xl) {
+        right: -300px;
+        top: 70px;
+    }
+    @include breakpoint(max-lg) {
+        display: none;
+    }
+}
+.coin1 {
+    animation: coin1 10s ease-in infinite;
+}
+.coin2 {
+    animation: coin2 8s ease-in infinite;
+}
+.coin3 {
+    animation: coin2 5s ease-in infinite;
+}
+.coin4 {
+    animation: coin1 12s ease-in infinite;
+}
+.coin5 {
+    animation: coin2 13s ease-in infinite;
+}

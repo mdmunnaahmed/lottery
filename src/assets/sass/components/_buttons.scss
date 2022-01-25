@@ -1,34 +1,29 @@
 .btn, .cmn--btn {
-  color: $dark;
+  color: $white;
   padding: 12px 35px;
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   font-family: $heading;
-  cursor: pointer;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
   @include transition;
   border-radius: 10px;
   z-index: 1;
-  border: 0;
-  @include breakpoint(max-xl) {
-      font-size: 18px;
-  }
   &:hover {
-      color: $dark;
+      color: $white;
   }
-  
   &.btn--lg {
       padding: 13px 35px !important;
-      font-size: 24px;
+      font-size: 22px;
       @include breakpoint(max-lg) {
-          font-size: 22px;
+          font-size: 20px;
       }
       @include breakpoint(max-sm) {
-          font-size: 20px;
+          font-size: 18px;
       }
   }
   &.btn--md {
-      padding: 10px 25px !important;
+      padding: 8px 25px !important;
       font-size: 15px;
   }
   &.btn--sm {
@@ -42,7 +37,7 @@
 }
 .cmn--btn {
   position: relative;
-  overflow: hidden;
+  background: $gradient-one;
   &::before, &::after {
       position: absolute;
       content: '';
@@ -59,3 +54,235 @@
   }
 }
 
+
+.video-button {
+    position: relative;
+    font-size: 24px;
+    width: 60px;
+    height:60px;
+    background: $gradient-one;
+    border-radius: 50%;
+    @extend %flex-center;
+    display: inline-flex;
+    color: $white;
+    z-index: 1;
+    &::before {
+        @extend %position-set;
+        border-radius: 50%;
+        background: $gradient-one;
+        z-index: -1;
+        animation: play-button-two 2s ease-in infinite;
+    }
+    &::after {
+        @extend %position-set;
+        border-radius: 50%;
+        background: $gradient-one;
+        z-index: -1;
+        animation: play-button-two 3s ease-in infinite;
+        animation-delay: 1.2s;
+    }
+
+}
+
+
+
+
+
+
+
+.btn--primary {
+  background-color: $primary;
+  &:hover {
+    background-color: darken($primary, 5%);
+  }
+}
+.btn--secondary {
+  background-color: $secondary;
+  &:hover {
+    background-color: darken($secondary, 5%);
+  }
+}
+.btn--success {
+  background-color: $success;
+  &:hover {
+    background-color: darken($success, 5%);
+  }
+}
+.btn--danger {
+  background-color: $danger;
+  &:hover {
+    background-color: darken($danger, 5%);
+  }
+}
+.btn--warning {
+  background-color: $warning;
+  &:hover {
+    background-color: darken($warning, 5%);
+  }
+}
+.btn--info {
+  background-color: $info;
+  &:hover {
+    background-color: darken($info, 5%);
+  }
+}
+.btn--light {
+  background-color: $light;
+  &:hover {
+    background-color: darken($light, 5%);
+  }
+}
+.btn--dark {
+  background-color: $dark;
+  @extend %text-white;
+  &:hover {
+    background-color: darken($dark, 5%);
+    @extend %text-white;
+  }
+}
+.btn-outline--primary {
+  color: $primary;
+  border-color: $primary;
+  &:hover {
+    background-color: $primary;
+    @extend %text-white;
+  }
+}
+.btn-outline--secondary {
+  color: $secondary;
+  border-color: $secondary;
+  &:hover {
+    background-color: $secondary;
+    @extend %text-white;
+  }
+}
+.btn-outline--success {
+  color: $success;
+  border-color: $success;
+  &:hover {
+    background-color: $success;
+    @extend %text-white;
+  }
+}
+.btn-outline--danger {
+  color: $danger;
+  border-color: $danger;
+  &:hover {
+    background-color: $danger;
+    @extend %text-white;
+  }
+}
+.btn-outline--warning {
+  color: $warning;
+  border-color: $warning;
+  &:hover {
+    background-color: $warning;
+    @extend %text-white;
+  }
+}
+.btn-outline--info {
+  color: $info;
+  border-color: $info;
+  &:hover {
+    background-color: $info;
+    @extend %text-white;
+  }
+}
+.btn-outline--light {
+  color: $light;
+  border-color: $light;
+  &:hover {
+    background-color: $light;
+    @extend %text-white;
+  }
+}
+.btn-outline--dark {
+  color: $dark;
+  border-color: $dark;
+  &:hover {
+    background-color: $dark;
+    @extend %text-white;
+  }
+}
+.btn-outline--base {
+  color: $base-color;
+  border: 1px solid $base-color;
+  &:hover {
+    background-color: $base-color;
+    @extend %text-white;
+  }
+}
+.btn-shadow--primary {
+  box-shadow: 0 0 6px 1px rgba($primary, 0.35);
+}
+.btn-shadow--secondary {
+  box-shadow: 0 0 6px 1px rgba($secondary, 0.35);
+}
+.btn-shadow--success {
+  box-shadow: 0 0 6px 1px rgba($success, 0.35);
+}
+.btn-shadow--danger {
+  box-shadow: 0 0 6px 1px rgba($danger, 0.35);
+}
+.btn-shadow--warning {
+  box-shadow: 0 0 6px 1px rgba($warning, 0.35);
+}
+.btn-shadow--info {
+  box-shadow: 0 0 6px 1px rgba($info, 0.35);
+}
+.btn-shadow--light {
+  box-shadow: 0 0 6px 1px rgba($light, 0.35);
+}
+.btn-shadow--dark {
+  box-shadow: 0 0 6px 1px rgba($dark, 0.35);
+}
+.btn-shadow--base {
+  box-shadow: 0 0 6px 1px rgba($base-color, 0.35);
+}
+.btn--capsule {
+  border-radius: 99px;
+}
+.icon-btn {
+  width: rem(30px);
+  height: rem(30px);
+  background-color: $base-color;
+  @extend %text-white;
+  border-radius: 3p;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    @extend %text-white;
+  }
+}
+.btn--group {
+  @extend %flex;
+  align-items: center;
+  margin-left: rem(-10px);
+  margin-right: rem(-10px);
+  &.style--two {
+    margin-left: rem(-5px);
+    margin-right: rem(-5px);
+    *[class*="btn"] {
+      margin: rem(3px) rem(5px);
+    }
+  }
+}
+*[class*="btn"] {
+  margin: rem(5px) rem(10px);
+  align-items: center;
+  &.d-flex {
+    padding: rem(8px) rem(35px);
+  }
+}
+[class*="btn"] {
+  &.btn-md {
+    padding: rem(10px) rem(20px);
+    font-size: rem(15px);
+  }
+  &.btn-sm {
+    padding: rem(6px) rem(10px);
+    font-size: rem(14px);
+  }
+}
+/* button css end */

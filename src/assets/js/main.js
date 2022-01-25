@@ -55,6 +55,8 @@ window.addEventListener('scroll', function(){
   header.classList.toggle('sticky', window.scrollY > 0);
 });
 
+// Wow init
+new WOW().init();
 
 // Scroll To Top 
 var scrollTop = $(".scrollToTop");
@@ -74,46 +76,6 @@ $('.scrollToTop').on('click', function () {
   return false;
 });
 
-$('.feature__slider').slick({
-  fade: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
-  pauseOnHover: true,
-  centerMode: false,
-  dots: false,
-  arrows: true,
-  nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-  prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-
-  ]
-});
 
 $('.testimonial-slider').slick({
   fade: false,
@@ -156,44 +118,7 @@ $('.testimonial-slider').slick({
   ]
 });
 
-$('.top-investor-slider').slick({
-  fade: false,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  infinite: true,
-  autoplay: true,
-  pauseOnHover: true,
-  centerMode: false,
-  dots: false,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
 
-  ]
-});
 
 // Odometer Counter
 $(".counter__item, .dashboard__card__item").each(function () {
@@ -223,28 +148,7 @@ $('.faq-item__title').on('click', function (e) {
   }
 });
 
-
-$('.user-thumb').on('click', function() {
-  $('.dashboard__sidebar').addClass('active')
-  $('.overlay').addClass('active')
-})
-
-$('.single-select').on('click', function() {
-  $('.single-select').removeClass('active')
-  $(this).addClass('active')
-})
-
-$('.btn-close, .overlay').on('click', function() {
-  $('.overlay').removeClass('active')
-  $('.menu').removeClass('active')
-})
-
-$('.video-button').magnificPopup({
+$('.video-button, .video').magnificPopup({
   type: 'iframe'
-  // other options
 });
 
-$('.how-item').on('mouseover', function() {
-  $('.how-item').removeClass('active')
-  $(this).addClass('active')
-})

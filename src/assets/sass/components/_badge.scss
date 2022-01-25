@@ -1,5 +1,5 @@
 // Add badges class name and color through sass loop
-$colors: "primary" $primary-color, "secondary" $secondary-color, "success" $success, "danger" $danger, "warning" $warning, "info" $info, "light" $light, "dark" $dark, "base" $base-color;
+$colors: "primary" $primary, "secondary" $secondary, "success" $success, "danger" $danger, "warning" $warning, "info" $info, "light" $light, "dark" $dark, "base" $base-color;
 
 @each $name, $color in $colors {
   .badge--#{$name} {
