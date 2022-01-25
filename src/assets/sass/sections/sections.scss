@@ -7,3 +7,105 @@
 .shape {
     position: absolute;
 }
+
+// How Section Starts Here
+div[class*="col"] {
+    &:not(&:last-child) {
+        .how-item::after {
+            position: absolute;
+            content: '';
+            right: -24px;
+            width: 80%;
+            height: 80%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $base-color;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            z-index: -2;
+        }
+    }
+    &:nth-child(2) {
+        @include breakpoint(max-lg) {
+            @include breakpoint(md) {
+                .how-item::after {
+                    top: auto !important;
+                    right: auto !important;
+                    left: 5px !important;
+                    bottom: -24px !important;
+                    transform: translateY(0) !important;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-md) {
+        .how-item::after {
+            top: calc(50% + 24px) !important;
+            right: 50% !important;
+            transform: translate(50%, -38%) !important;
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%) !important;
+        }
+        .how-item::before {
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%) !important;
+        }
+        .how-item__icon {
+            left: 24px;
+            top: 0;
+        }
+    }
+    @include breakpoint(max-sm) {
+        .how-item {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+}
+.how-item {
+    text-align: center;
+    position: relative;
+    padding: 80px 60px;
+    z-index: 1;
+    height: 100%;
+    @include breakpoint(max-xxl) {
+        padding: 60px 50px;
+    }
+    @include breakpoint(max-xl) {
+        padding: 40px 40px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 50px 40px;
+    }
+    &::before {
+        @extend %position-set;
+        background: $gradient-one;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        z-index: -1;
+    }
+    &__icon {
+        width: 100px;
+        height:100px;
+        background: $gradient-one-rev;
+        @extend %flex-center;
+        font-size: 44px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        z-index: 11;
+        box-shadow: 0 3px 10px rgba($white,.3);
+        @include breakpoint(max-xl) {
+            width: 90px;
+            height:90px;
+            font-size: 42px;
+        }
+    }
+    &__content {
+        .serial {
+            font-size: 64px;
+            text-shadow: 3px 3px 0 rgba($white,.3);
+        }
+        .title {
+            margin-bottom: 12px;
+        }
+    }
+}
+// How Section Ends Here

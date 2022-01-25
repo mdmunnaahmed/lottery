@@ -1,8 +1,8 @@
 .pt-60 {
-    padding-top: 60px;
+    padding-top: clamp(30px, 5vh, 60px);
 }
 .pt-50 {
-    padding-top: 50px;
+    padding-top: clamp(25px, 5vh, 50px);
 }
 .pt-120 {
     padding-top: 120px;
@@ -11,10 +11,10 @@
 
 
 .pb-60 {
-    padding-bottom: 60px;
+    padding-bottom: clamp(30px, 5vh, 60px);
 }
 .pb-50 {
-    padding-bottom: 50px;
+    padding-bottom: clamp(25px, 5vh, 50px);
 }
 .pb-120 {
     padding-bottom: 120px;

@@ -27,6 +27,12 @@
         position: relative;
         z-index: 1;
     }
+    .shape1 {
+        top: 0;
+        opacity: .2;
+        left: 0;
+        max-width: 100%;
+    }
 }
 .banner-content {
     max-width: 650px;

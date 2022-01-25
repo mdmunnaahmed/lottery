@@ -5,21 +5,23 @@ $body:  'Jost', sans-serif;
 $fs-base: 16px;
 
 // Title Color
-$title-color: rgb(33, 37, 56);
+$title-color: rgb(255, 255, 255);
 
 // Essential Colors
-$base-color: #FFA500;
+$base-color: #f7893f;
 $gradient-one: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
+$gradient-one-rev: linear-gradient(180deg, #FF03FC 0%, #F7553F 100%);
 $gradient-two: linear-gradient(0deg, #F7553F 20%, #F68738 100%);
 
 $accent-color: #FF03FC;
 
 
-$body-color : rgb(77, 70, 70);
-$border-color: rgba(14, 14, 14, 0.1);
+$body-color : rgb(243, 243, 243);
+$border-color: rgba(247, 249, 253, 0.1);
 
-$section-bg : #f6f8fa;
-$body-bg : #fff;
+// $section-bg : #770075;
+$section-bg : linear-gradient(20deg, #a804a6, #770075 100%);
+$body-bg : linear-gradient(200deg, #a804a6, #770075 100%);
 
 $white : #fff;
 
