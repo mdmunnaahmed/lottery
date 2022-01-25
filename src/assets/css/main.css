@@ -1815,6 +1815,21 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     background: #f7893f;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     z-index: -2;
+    animation: fadeInOne 2s ease-in infinite;
+}
+
+@keyframes fadeInOne {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
