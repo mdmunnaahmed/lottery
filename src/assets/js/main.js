@@ -160,3 +160,16 @@ $(".faq-item__title").on("click", function (e) {
 $(".video-button, .video").magnificPopup({
     type: "iframe",
 });
+
+// Lottery Countdown
+$("#lottery01").countdown(
+    {
+        date: "06/15/2022 23:59:59",
+        offset: +6,
+        day: "Day",
+        days: "Days",
+    },
+    function () {
+        alert("Done!");
+    }
+);

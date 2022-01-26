@@ -20,6 +20,7 @@
                         border: none;
                     }
                     &::before {
+                        text-align: left;
                         content: attr(data-label);
                         font-family: $heading;
                         font-size: 16px;
@@ -56,6 +57,7 @@
                         border: none;
                     }
                     &::before {
+                        text-align: left;
                         content: attr(data-label);
                         font-family: $heading;
                         font-size: 16px;
@@ -97,6 +99,7 @@
                         font-size: 16px;
                         color: $title-color;
                         font-weight: 500;
+                        text-align: left;
                         @include breakpoint(max-sm) {
                             font-size: 15px;
                         }
@@ -114,7 +117,7 @@
     border-collapse: collapse;
     thead {
         tr {
-            // background: rgba($base-color,1);
+            background: $gradient-one;
             th {
                 padding: 10px 15px;
                 font-family: $heading;
@@ -122,16 +125,13 @@
                 border: none;
                 font-size: 15px;
                 font-weight: 500;
-                border: 1px solid $border-color;
             }
         }
     }
     tbody {
         font-size: 15px;
         tr {
-            &:nth-child(odd) {
-                background: $section-bg;
-            }
+            background: $section-bg;
             td {
                 color: $white;
                 vertical-align: middle;
@@ -140,6 +140,48 @@
                 @include breakpoint(lg) {
                     border-color: $border-color;
                 }
+            }
+        }
+    }
+}
+
+// Project Table
+.ticket-table {
+    text-align: center;
+    thead {
+        tr {
+            th {
+                font-size: 20px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                .name {
+                    font-size: 16px;
+                }
+            }
+            .price {
+                font-size: 24px;
+                font-weight: 700;
+                color: $base-color;
+                sub {
+                    font-size: 70%;
+                    bottom: 0 !important;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .lottery-ticket {
+        @extend %flex;
+        align-items: center;
+        .icon {
+            width: 70px;
+            margin-right: 20px;
+            img {
+                width: 100%;
             }
         }
     }

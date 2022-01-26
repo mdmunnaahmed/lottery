@@ -121,3 +121,20 @@ div[class*="col"] {
     }
 }
 // How Section Ends Here
+
+
+// Ticket Section Starts Here
+.ticket-section {
+    position: relative;
+    .shape1 {
+        top: 0;
+        left: 0;
+        opacity: .1;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+// Ticket Section Ends Here
