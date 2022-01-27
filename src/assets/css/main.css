@@ -1308,12 +1308,12 @@ select.style--dark option {
 
 .header-bottom {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 @media (max-width: 991px) {
     .header-bottom {
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }
 
@@ -1988,6 +1988,52 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 .ticket-section .container {
     position: relative;
     z-index: 1;
+}
+
+.feature-item {
+    margin-bottom: 30px;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-item .left-content {
+    display: inline-block;
+    width: 120px;
+    padding-right: 2px;
+}
+
+.feature-item .left-content .title {
+    color: #f7893f;
+    font-size: 32px;
+}
+
+.feature-item .left-content .info {
+    color: #f7893f;
+}
+
+.feature-item .right-content {
+    width: calc(100% - 120px);
+    border-left: 3px solid #f7893f;
+    padding-left: 25px;
+}
+
+.choose-item {
+    padding: 50px 40px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
+}
+
+.choose-item__icon {
+    width: 80px;
+    height: 80px;
+    margin: 25px 0;
+}
+
+.choose-item__icon img {
+    width: 100%;
+    height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

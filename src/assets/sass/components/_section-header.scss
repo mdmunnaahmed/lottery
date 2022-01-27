@@ -1,0 +1,15 @@
+.section-header {
+    margin-bottom: clamp(35px, 5vw, 55px);
+    &__title {
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 20px;
+        @include breakpoint(max-md) {
+            font-size: 18px;
+        }
+        @include breakpoint(max-xs) {
+            font-size: 17px;
+        }
+    }
+}

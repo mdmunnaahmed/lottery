@@ -23,9 +23,9 @@
 }
 .header-bottom {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     @include breakpoint(max-lg) {
-        padding: 15px 0;
+        padding: 10px 0
     }
 }
 .header-bottom-area {
