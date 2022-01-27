@@ -71,6 +71,15 @@ div[class*="col"] {
         }
     }
 }
+.how-section {
+    position: relative;
+    .shape1 {
+        left: 0;
+        top: 0;
+        width: 100%;
+        opacity: .3;
+    }
+}
 .how-item {
     text-align: center;
     position: relative;
@@ -180,3 +189,78 @@ div[class*="col"] {
     }
 }
 // Why Choose Us Section Ends Here
+
+
+// Latest Winning Results Section Starts Here
+.lottery-number-list {
+    li {
+        width: 33px;
+        height:33px;
+        @extend %flex-center;
+        background: $gradient-one;
+        border-radius: 50%;
+        font-size: 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        box-shadow: 0 3px 7px 3px rgba($base-color,.1);
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+.ticket-item {
+    .icon {
+        width: 50px;
+        margin-right: 15px;
+        img {
+            width: 100%
+        }
+    }
+    .name {
+        font-size: 20px;
+    }
+}
+.result-item {
+    @extend %flex;
+    justify-content: center;
+    width: 100%;
+    @include breakpoint(xl) {
+        flex-wrap: nowrap;
+    }
+    &__left {
+        text-align: center;
+        padding: 25px;
+        border-radius: 10px 0 0 10px;
+        background: $body-bg;
+        @include breakpoint(max-md) {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+        }
+        .draw-time {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid $border-color;
+            .time {
+                font-size: 20px;
+            }
+        }
+    }
+    &__right {
+        background: $gradient-one;
+        border-radius: 0 10px 10px 0;
+        padding: 25px;
+        @include breakpoint(max-md) {
+            border-radius:  0 0 10px 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .est, .next {
+            font-size: 18px;
+            @include breakpoint(max-sm) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+// Latest Winning Results Section Ends Here
