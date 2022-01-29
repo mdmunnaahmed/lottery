@@ -221,7 +221,7 @@ ul {
     justify-content: center;
 }
 
-.video-button::before, .video-button::after, .banner-section::before, .how-item::before {
+.video-button::before, .video-button::after, .banner-section::before, .how-item::before, .winner-section::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -870,30 +870,36 @@ h6 {
 .form--control {
     height: 50px;
     border-radius: 5px;
-    border: 1px solid rgba(247, 249, 253, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     outline: 0;
     box-shadow: none;
     color: #f3f3f3;
+    background: transparent;
 }
 
 .form--control:focus {
+    background: transparent;
     color: #fff;
-    border: 1px solid rgba(247, 137, 63, 0.6);
+    border: 1px solid #f7893f;
     outline: 0;
     box-shadow: none;
 }
 
-.form--control[type=file] {
+.form--control[type="file"] {
     line-height: 25px;
     padding: 12px 25px;
 }
 
 .form--control[readonly] {
-    background: rgba(115, 103, 240, 0.05) !important;
+    background: rgba(247, 137, 63, 0.05) !important;
 }
 
 .form--control[readonly]:focus {
     border-color: rgba(247, 249, 253, 0.2);
+}
+
+::-webkit-input-placeholder {
+    color: #fff !important;
 }
 
 input:autofill,
@@ -902,8 +908,18 @@ input:autofill:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: #fff;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+select {
+    position: relative;
+    background-color: transparent !important;
+}
+
+select option {
+    background: transparent !important;
+    color: #363636;
 }
 
 select.style--dark option {
@@ -928,7 +944,7 @@ select.style--dark option {
     padding-left: 0;
 }
 
-.custom--radio input[type=radio] {
+.custom--radio input[type="radio"] {
     width: 100%;
     position: absolute;
     top: 0;
@@ -937,12 +953,12 @@ select.style--dark option {
     cursor: pointer;
 }
 
-.custom--radio input[type=radio]:checked ~ label::before {
+.custom--radio input[type="radio"]:checked ~ label::before {
     border-width: 2px;
     border-color: #f7893f;
 }
 
-.custom--radio input[type=radio]:checked ~ label::after {
+.custom--radio input[type="radio"]:checked ~ label::after {
     opacity: 1;
 }
 
@@ -956,7 +972,7 @@ select.style--dark option {
 
 .custom--radio label::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 4px;
     left: 0;
     width: 15px;
@@ -966,7 +982,7 @@ select.style--dark option {
 
 .custom--radio label::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 8px;
     left: 4px;
     width: 7px;
@@ -999,7 +1015,7 @@ select.style--dark option {
 .custom--checkbox label::before {
     position: absolute;
     content: "\f04d";
-    font-family: 'Line Awesome Free';
+    font-family: "Line Awesome Free";
     font-weight: 900;
     top: 3px;
     left: -1.5625rem;
@@ -1843,7 +1859,8 @@ select.style--dark option {
     margin: -10px;
 }
 
-.button-wrapper .cmn--btn, .button-wrapper .btn {
+.button-wrapper .cmn--btn,
+.button-wrapper .btn {
     margin: 10px;
 }
 
@@ -1853,7 +1870,7 @@ select.style--dark option {
 
 div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     position: absolute;
-    content: '';
+    content: "";
     right: -24px;
     width: 80%;
     height: 80%;
@@ -1922,7 +1939,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     left: 0;
     top: 0;
     width: 100%;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .how-item {
@@ -1994,7 +2011,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 .ticket-section .shape1 {
     top: 0;
     left: 0;
-    opacity: .1;
+    opacity: 0.1;
     width: 100%;
 }
 
@@ -2041,12 +2058,40 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 .choose-item__icon {
     width: 80px;
     height: 80px;
-    margin: 25px 0;
+    margin: 25px 0 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.choose-item__icon::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
 }
 
 .choose-item__icon img {
     width: 100%;
     height: 100%;
+}
+
+.result-section {
+    position: relative;
+}
+
+.result-section .shape1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.15;
+}
+
+.result-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .lottery-number-list li {
@@ -2127,14 +2172,135 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     }
 }
 
-.result-item__right .est, .result-item__right .next {
+.result-item__right .est,
+.result-item__right .next {
     font-size: 18px;
 }
 
 @media (max-width: 575px) {
-    .result-item__right .est, .result-item__right .next {
+    .result-item__right .est,
+  .result-item__right .next {
         font-size: 16px;
     }
+}
+
+.input-round-wrapper .form--control {
+    padding: 0px;
+    width: auto;
+    min-width: 0;
+    text-align: center;
+}
+
+.check-lottery {
+    position: relative;
+}
+
+.check-lottery .shape1 {
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    opacity: 0.15;
+}
+
+.check-lottery .container {
+    position: relative;
+    z-index: 1;
+}
+
+.check-lottery-form .form-group {
+    padding: 25px;
+    background: linear-gradient(20deg, #a804a6, #770075 100%);
+    background: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
+    border-radius: 10px;
+}
+
+.winner-section {
+    position: relative;
+}
+
+.winner-section::before {
+    background: linear-gradient(20deg, #a804a6, #770075 100%);
+}
+
+.winner-section .shape1 {
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+}
+
+.winner-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.winner-slider .slick-list {
+    margin: 0 -10px;
+}
+
+.winner-item {
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0 10px;
+}
+
+.winner-item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    aspect-ratio: 1;
+    left: 0;
+    top: 0;
+    transform: translateY(-70%);
+    background: #fff;
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.winner-item::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: url(../images/winner/win.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.winner-item__thumb {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.winner-item__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.winner-item__content .win-price sub {
+    bottom: 0;
+    left: -2px;
+    font-weight: 400;
+}
+
+.winner-item__content .name {
+    font-weight: 500;
+    margin-top: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

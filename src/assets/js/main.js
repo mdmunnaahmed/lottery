@@ -118,6 +118,45 @@ $(".testimonial-slider").slick({
         },
     ],
 });
+$(".winner-slider").slick({
+    fade: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    pauseOnHover: true,
+    centerMode: false,
+    dots: true,
+    arrows: false,
+    nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
+    prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+    responsive: [
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 3,
+            },
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+        {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+});
 
 // Odometer Counter
 $(".counter__item, .dashboard__card__item").each(function () {
