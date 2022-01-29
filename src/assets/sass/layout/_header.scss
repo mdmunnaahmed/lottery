@@ -103,7 +103,7 @@
             display: block;
             padding: 4px 15px;
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 500;
             text-transform: uppercase;
             font-family: $heading;
             color: $white;
@@ -167,7 +167,6 @@
                 display: block;
                 @include text-wrap;
                 -webkit-line-clamp: 1;
-                color: $dark;
                 &:hover {
                     padding-left: 20px;
                     background: $base-color;

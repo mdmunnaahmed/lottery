@@ -145,7 +145,7 @@ span, sub, sup, a {
 }
 
 .section-bg {
-    background: #5b005a;
+    background: #630161;
 }
 
 .body-bg {
@@ -214,14 +214,14 @@ ul {
     flex-wrap: wrap;
 }
 
-.video-button, .how-item__icon, .lottery-number-list li {
+.video-button, .social-links li a, .how-item__icon, .lottery-number-list li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-.video-button::before, .video-button::after, .banner-section::before, .how-item::before, .winner-section::before {
+.video-button::before, .video-button::after, .banner-section::before, .footer-section::before, .how-item::before, .winner-section::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -350,7 +350,7 @@ h6 {
 
 .cmn--btn {
     position: relative;
-    background: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
+    background: linear-gradient(0deg, #EC1379 0%, #6C0092 100%);
 }
 
 .cmn--btn::before, .cmn--btn::after {
@@ -811,7 +811,7 @@ h6 {
 }
 
 .table tbody tr {
-    background: #5b005a;
+    background: #630161;
 }
 
 .table tbody tr td {
@@ -1033,7 +1033,7 @@ select.style--dark option {
 
 .custom--card .card--header,
 .custom--card .card--footer {
-    background: #5b005a;
+    background: #630161;
     color: #082032;
     text-align: center;
 }
@@ -1151,7 +1151,7 @@ select.style--dark option {
 .custom--modal .modal--body,
 .custom--modal .modal--header {
     border-color: rgba(247, 249, 253, 0.2);
-    background: #5b005a;
+    background: #630161;
     border-color: rgba(247, 249, 253, 0.2) !important;
 }
 
@@ -1173,7 +1173,7 @@ select.style--dark option {
 .custom--modal .modal-content {
     border: none;
     color: #fff;
-    background: #5b005a;
+    background: #630161;
 }
 
 .pagination {
@@ -1434,7 +1434,7 @@ select.style--dark option {
     display: block;
     padding: 4px 15px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: "Jost", sans-serif;
     color: #fff;
@@ -1507,7 +1507,6 @@ select.style--dark option {
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         -webkit-line-clamp: 1;
-        color: #082032;
     }
 
     .sub-menu li a:hover {
@@ -1856,6 +1855,55 @@ select.style--dark option {
     animation: coin2 13s ease-in infinite;
 }
 
+.footer-section {
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-section::before {
+    background: linear-gradient(0deg, #EC1379 0%, #6C0092 100%);
+    opacity: 0.1;
+}
+
+.footer-section .shape1 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.1;
+}
+
+.footer-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-links li {
+    padding: 5px 10px;
+}
+
+.footer-links li a {
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.social-links li {
+    padding: 3px 5px;
+}
+
+.social-links li a {
+    width: 35px;
+    aspect-ratio: 1;
+    font-size: 18px;
+    background: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-links li a:hover {
+    color: #fff;
+}
+
 .button-wrapper {
     margin: -10px;
 }
@@ -2137,7 +2185,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 
 .result-item__left {
     text-align: center;
-    padding: 25px;
+    padding: 30px 25px;
     border-radius: 10px 0 0 10px;
     background: #550254;
 }
@@ -2192,6 +2240,10 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     text-align: center;
 }
 
+.input-round-wrapper .form--control:not(:last-child) {
+    margin-right: -1px;
+}
+
 .check-lottery {
     position: relative;
 }
@@ -2210,7 +2262,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 
 .check-lottery-form .form-group {
     padding: 25px;
-    background: #5b005a;
+    background: #630161;
     background: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
     border-radius: 10px;
 }
@@ -2220,7 +2272,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 }
 
 .winner-section::before {
-    background: #5b005a;
+    background: #630161;
 }
 
 .winner-section .shape1 {
@@ -2235,12 +2287,16 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     z-index: 1;
 }
 
+.winner-slider .single-slide {
+    height: 100%;
+}
+
 .winner-slider .slick-list {
     margin: 0 -10px;
 }
 
 .winner-item {
-    padding: 50px 40px;
+    padding: 50px 30px;
     border-radius: 10px;
     text-align: center;
     background: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
@@ -2248,6 +2304,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     position: relative;
     z-index: 1;
     margin: 0 10px;
+    height: 100%;
 }
 
 .winner-item::before {
@@ -2300,8 +2357,9 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 }
 
 .winner-item__content .name {
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 10px;
+    font-size: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

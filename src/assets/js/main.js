@@ -123,7 +123,7 @@ $(".winner-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     pauseOnHover: true,
     centerMode: false,
     dots: true,

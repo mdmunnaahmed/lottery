@@ -1,0 +1,48 @@
+.footer-section {
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+    &::before {
+        @extend %position-set;
+        background: $gradient-one-rev;
+        opacity: 0.1;
+    }
+    .shape1 {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.1;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.footer-links {
+    li {
+        padding: 5px 10px;
+        a {
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.social-links {
+    li {
+        padding: 3px 5px;
+        a {
+            width: 35px;
+            aspect-ratio: 1;
+            @extend %flex-center;
+            font-size: 18px;
+            background: $gradient-one;
+            border-radius: 50%;
+            overflow: hidden;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
