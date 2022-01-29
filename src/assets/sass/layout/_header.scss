@@ -6,7 +6,7 @@
     z-index: 111;
     @include transition;
     &.sticky {
-        background: $gradient-two;
+        background: $gradient-one;
         position: fixed;
         top: 0;
     }
@@ -217,7 +217,7 @@
         opacity: 0;
         overflow-y: auto;
         @include transition;
-        background: $gradient-two;
+        background: $gradient-one;
         &.active {
             opacity: 1;
             transform: translateY(0) scaleY(1);

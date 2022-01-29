@@ -1,6 +1,6 @@
 // Font-family
-$heading: 'Jost', sans-serif;
-$body:  'Jost', sans-serif;
+$heading: "Jost", sans-serif;
+$body: "Jost", sans-serif;
 
 $fs-base: 16px;
 
@@ -8,28 +8,36 @@ $fs-base: 16px;
 $title-color: rgb(255, 255, 255);
 
 // Essential Colors
-$base-color: #f7893f;
-$gradient-one: linear-gradient(0deg, #FF03FC 0%, #F7553F 100%);
-$gradient-one-rev: linear-gradient(180deg, #FF03FC 0%, #F7553F 100%);
-$gradient-two: linear-gradient(0deg, #F7553F 20%, #F68738 100%);
+$base-color: #ff0095;
+// $gradient-one: linear-gradient(0deg, #ec038b 0%, #fb6468 44%, #fbb936 100%);
+// $gradient-one-rev: linear-gradient(
+//     180deg,
+//     #ec038b 0%,
+//     #fb6468 44%,
+//     #fbb936 100%
+// );
 
-$accent-color: #FF03FC;
 
 
-$body-color : rgb(243, 243, 243);
+$gradient-one: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
+$gradient-one-rev: linear-gradient(00deg, #EC1379 0%, #6C0092 100%);
+
+$accent-color: #ff03fc;
+
+$body-color: rgb(243, 243, 243);
 $border-color: rgba(247, 249, 253, 0.2);
 
 // $section-bg : #770075;
-$section-bg : linear-gradient(20deg, #a804a6, #770075 100%);
-$body-bg : linear-gradient(270deg, #a804a6, #770075 100%);
+$section-bg: #5b005a;
+$body-bg: #550254;
 
-$white : #fff;
+$white: #fff;
 
-$theme-one: #FF3653;
-$theme-two: #18D39E;
-$theme-three: #0C93D2;
-$theme-four: #F6A200;
-$theme-five: #09389E;
+$theme-one: #ff3653;
+$theme-two: #18d39e;
+$theme-three: #0c93d2;
+$theme-four: #f6a200;
+$theme-five: #09389e;
 
 // color variable for Bootstrap
 $primary: #7367f0;
@@ -41,4 +49,3 @@ $info: #1e9ff2;
 $dark: #082032;
 $light: #bcc7da;
 $muted: #a0a0a0;
-
