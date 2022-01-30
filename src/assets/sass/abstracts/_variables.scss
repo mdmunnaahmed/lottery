@@ -8,19 +8,13 @@ $fs-base: 16px;
 $title-color: rgb(255, 255, 255);
 
 // Essential Colors
-$base-color: #ff0095;
-// $gradient-one: linear-gradient(0deg, #ec038b 0%, #fb6468 44%, #fbb936 100%);
-// $gradient-one-rev: linear-gradient(
-//     180deg,
-//     #ec038b 0%,
-//     #fb6468 44%,
-//     #fbb936 100%
-// );
+$base-color: #ff3e3e;
 
+$gradient-one: #013067;
+$gradient-one-rev: #013067;
 
-
-$gradient-one: linear-gradient(180deg, #EC1379 0%, #6C0092 100%);
-$gradient-one-rev: linear-gradient(00deg, #EC1379 0%, #6C0092 100%);
+// $gradient-one: linear-gradient(180deg, #092f52 0%, #041a2b 100%);
+// $gradient-one-rev: linear-gradient(00deg, #092f52 0%, #041a2b 100%);
 
 $accent-color: #ff03fc;
 
@@ -30,6 +24,9 @@ $border-color: rgba(247, 249, 253, 0.2);
 // $section-bg : #770075;
 $section-bg: #630161;
 $body-bg: #550254;
+
+$section-bg: #021b39;
+$body-bg: #01244e;
 
 $white: #fff;
 

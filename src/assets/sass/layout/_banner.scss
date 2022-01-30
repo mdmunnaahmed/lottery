@@ -1,6 +1,6 @@
 .banner-section {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 220px;
+    padding-bottom: 130px;
     position: relative;
     @include breakpoint(max-xxl) {
         padding-top: 150px;
@@ -20,8 +20,8 @@
     }
     &::before {
         @extend %position-set;
-        background: $gradient-one;
-        opacity: .35;
+        background: $base-color;
+        opacity: 0.15;
     }
     .container {
         position: relative;
@@ -29,7 +29,7 @@
     }
     .shape1 {
         top: 0;
-        opacity: .2;
+        opacity: 0.2;
         left: 0;
         max-width: 100%;
     }
@@ -139,3 +139,46 @@
 .coin5 {
     animation: coin2 13s ease-in infinite;
 }
+
+// Inner Banner Starts Here
+.inner-banner {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    position: relative;
+    .shape1 {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.1;
+        img {
+            width: 100%;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.breadcrumbs {
+    margin-top: 10px;
+    font-size: 18px;
+    color: $base-color;
+    li {
+        padding-right: 25px;
+        &:last-child {
+            padding-right: 0;
+        }
+        &:first-child {
+            position: relative;
+            margin-right: 15px;
+            &::before {
+                @include line-ico;
+                content: "\f105";
+                color: $white;
+                right: 0;
+                top: 4px;
+            }
+        }
+    }
+}
+// Inner Banner Ends Here

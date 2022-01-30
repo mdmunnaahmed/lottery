@@ -39,7 +39,7 @@
 }
 .cmn--btn {
     position: relative;
-    background: $gradient-one-rev;
+    background: $base-color;
     &::before,
     &::after {
         position: absolute;
@@ -63,7 +63,7 @@
     font-size: 24px;
     width: 60px;
     height: 60px;
-    background: $gradient-one;
+    background: $base-color;
     border-radius: 50%;
     @extend %flex-center;
     display: inline-flex;
@@ -72,22 +72,28 @@
     &::before {
         @extend %position-set;
         border-radius: 50%;
-        background: $gradient-one;
+        background: $base-color;
         z-index: -1;
         animation: play-button-two 2s ease-in infinite;
     }
     &::after {
         @extend %position-set;
         border-radius: 50%;
-        background: $gradient-one;
+        background: $base-color;
         z-index: -1;
         animation: play-button-two 3s ease-in infinite;
         animation-delay: 1.2s;
     }
+    &:hover {
+        color: $white
+    }
 }
 
 .btn--base {
-    background: $gradient-one;
+    background-color: $base-color;
+    &:hover {
+        background-color: darken($base-color, 5%);
+    }
 }
 
 .btn--primary {

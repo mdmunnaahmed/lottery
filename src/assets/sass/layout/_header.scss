@@ -6,7 +6,7 @@
     z-index: 111;
     @include transition;
     &.sticky {
-        background: $gradient-one;
+        background: lighten($body-bg, 5%);
         position: fixed;
         top: 0;
     }
