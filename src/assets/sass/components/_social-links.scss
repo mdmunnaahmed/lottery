@@ -1,0 +1,28 @@
+.social-links {
+    li {
+        padding: 3px 5px;
+        a {
+            width: 35px;
+            aspect-ratio: 1;
+            @extend %flex-center;
+            font-size: 18px;
+            background: $base-color;
+            border-radius: 50%;
+            overflow: hidden;
+            &:hover {
+                color: $white;
+                background: $base-color;
+            }
+        }
+    }
+    &.without-bg {
+        li {
+            padding: 0;
+            a {
+                padding: 5px;
+                width: auto;
+                background: transparent;
+            }
+        }
+    }
+}

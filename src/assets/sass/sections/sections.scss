@@ -407,3 +407,112 @@ div[class*="col"] {
     }
 }
 // Winners Section Ends Here
+
+// About Section Starts Here
+.section-thumb {
+    @include breakpoint(max-lg) {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+// About Section Ends Here
+
+// Testimonial Section Starts Here
+.testimonial-slider {
+    padding: 80px;
+    background: $section-bg;
+    position: relative;
+    @include breakpoint(max-lg) {
+        padding: 50px 40px 70px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 30px 20px 70px;
+    }
+    .shape1 {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.testimonial-item {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto;
+    &__thumb {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 30px;
+        @include breakpoint(max-sm) {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+        @include breakpoint(max-xs) {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        .name {
+            margin-bottom: 5px;
+        }
+        .winner-of {
+            color: $base-color;
+            margin-bottom: 15px;
+        }
+    }
+}
+// Testimonial Section Ends Here
+
+// Team Section Starts Here
+.team-item {
+    text-align: center;
+    padding: 30px 25px;
+    background: $body-bg;
+    &:hover {
+        .team-item__thumb img {
+            transform: scale(1.1);
+        }
+    }
+    &__thumb {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        padding-top: 25px;
+        .name {
+            margin-bottom: 5px;
+        }
+        .designation {
+            font-size: 15px;
+            color: $base-color;
+        }
+        .social-links {
+            margin-top: 10px;
+        }
+    }
+}
+// Team Section Ends Here

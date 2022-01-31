@@ -81,7 +81,7 @@ $(".scrollToTop").on("click", function () {
 
 $(".testimonial-slider").slick({
     fade: false,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     autoplay: true,
@@ -89,34 +89,8 @@ $(".testimonial-slider").slick({
     centerMode: false,
     dots: true,
     arrows: false,
-    nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-    prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
-    responsive: [
-        {
-            breakpoint: 1199,
-            settings: {
-                slidesToShow: 3,
-            },
-        },
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 2,
-            },
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-            },
-        },
-        {
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 1,
-            },
-        },
-    ],
+    nextArrow: '<i class="las la-long-arrow-alt-right arrow-right"></i>',
+    prevArrow: '<i class="las la-long-arrow-alt-left arrow-left"></i> ',
 });
 $(".winner-slider").slick({
     fade: false,
@@ -128,8 +102,8 @@ $(".winner-slider").slick({
     centerMode: false,
     dots: true,
     arrows: false,
-    nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-    prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+    nextArrow: '<i class="las las la-long-arrow-alt-right arrow-right"></i>',
+    prevArrow: '<i class="las la-long-arrow-alt-left arrow-left"></i> ',
     responsive: [
         {
             breakpoint: 1199,

@@ -185,6 +185,48 @@ ul {
     z-index: 111;
 }
 
+.rtl {
+    direction: rtl !important;
+}
+
+.slick-dots {
+    left: 0;
+    bottom: 25px;
+}
+
+.slick-dots li {
+    background: rgba(255, 62, 62, 0.3);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+.slick-dots li::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: all ease .3s;
+}
+
+.slick-dots li.slick-active {
+    background: #ff3e3e;
+}
+
+.slick-dots li.slick-active::before {
+    transform: translate(-50%, -50%) scale(2.5);
+    border-color: #ff3e3e;
+}
+
+a,
+img,
+.title a,
+.name a {
+    transition: all ease .3s;
+}
+
 .pt-60 {
     padding-top: clamp(30px, 5vh, 60px);
 }
@@ -219,6 +261,12 @@ ul {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+.slick-dots li::before {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .video-button::before, .video-button::after, .banner-section::before, .footer-section::before, .how-item::before, .winner-section::before {
@@ -1305,6 +1353,34 @@ select.style--dark option {
     }
 }
 
+.social-links li {
+    padding: 3px 5px;
+}
+
+.social-links li a {
+    width: 35px;
+    aspect-ratio: 1;
+    font-size: 18px;
+    background: #ff3e3e;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-links li a:hover {
+    color: #fff;
+    background: #ff3e3e;
+}
+
+.social-links.without-bg li {
+    padding: 0;
+}
+
+.social-links.without-bg li a {
+    padding: 5px;
+    width: auto;
+    background: transparent;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -1947,24 +2023,6 @@ select.style--dark option {
     padding: 5px 10px;
 }
 
-.social-links li {
-    padding: 3px 5px;
-}
-
-.social-links li a {
-    width: 35px;
-    aspect-ratio: 1;
-    font-size: 18px;
-    background: #013067;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.social-links li a:hover {
-    color: #fff;
-    background: #ff3e3e;
-}
-
 .button-wrapper {
     margin: -10px;
 }
@@ -2387,6 +2445,132 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     font-weight: 400;
     margin-top: 10px;
     font-size: 20px;
+}
+
+@media (max-width: 991px) {
+    .section-thumb {
+        width: 100%;
+    }
+
+    .section-thumb img {
+        width: 100%;
+    }
+}
+
+.testimonial-slider {
+    padding: 80px;
+    background: #021b39;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .testimonial-slider {
+        padding: 50px 40px 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .testimonial-slider {
+        padding: 30px 20px 70px;
+    }
+}
+
+.testimonial-slider .shape1 {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.testimonial-slider .shape1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-item {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.testimonial-item__thumb {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 575px) {
+    .testimonial-item__thumb {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .testimonial-item__thumb {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+}
+
+.testimonial-item__thumb img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-item__content .name {
+    margin-bottom: 5px;
+}
+
+.testimonial-item__content .winner-of {
+    color: #ff3e3e;
+    margin-bottom: 15px;
+}
+
+.team-item {
+    text-align: center;
+    padding: 30px 25px;
+    background: #01244e;
+}
+
+.team-item:hover .team-item__thumb img {
+    transform: scale(1.1);
+}
+
+.team-item__thumb {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-item__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-item__content {
+    padding-top: 25px;
+}
+
+.team-item__content .name {
+    margin-bottom: 5px;
+}
+
+.team-item__content .designation {
+    font-size: 15px;
+    color: #ff3e3e;
+}
+
+.team-item__content .social-links {
+    margin-top: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
