@@ -1,0 +1,17 @@
+.list {
+    li {
+        padding: 5px 0;
+    }
+    &.number-list {
+        list-style:decimal;
+        padding-left: 15px;
+    }
+    &.circle-list {
+        list-style: circle;
+        padding-left: 15px;
+    }
+    &.disc-list {
+        list-style: disc;
+        padding-left: 15px;
+    }
+}

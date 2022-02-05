@@ -681,3 +681,26 @@ div[class*="col"] {
     }
 }
 // Contact Section Ends Here
+
+// Privacy Policy Section Starts Here
+.privacy-wrapper {
+    .title {
+        margin-bottom: 15px;
+        font-size: 26px;
+        @include breakpoint(max-xs) {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: 17px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include breakpoint(max-xs) {
+            margin-bottom: 20px;
+        }
+    }
+}
+// Privacy Policy Section Ends Here

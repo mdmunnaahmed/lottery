@@ -294,6 +294,25 @@ img,
     color: #fff;
 }
 
+.list li {
+    padding: 5px 0;
+}
+
+.list.number-list {
+    list-style: decimal;
+    padding-left: 15px;
+}
+
+.list.circle-list {
+    list-style: circle;
+    padding-left: 15px;
+}
+
+.list.disc-list {
+    list-style: disc;
+    padding-left: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -2770,6 +2789,33 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 
 .contact-info-item .content a {
     display: block;
+}
+
+.privacy-wrapper .title {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+@media (max-width: 450px) {
+    .privacy-wrapper .title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+.privacy-wrapper p {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.privacy-wrapper p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 450px) {
+    .privacy-wrapper p {
+        margin-bottom: 20px;
+    }
 }
 
 /*# sourceMappingURL=main.css.map */
