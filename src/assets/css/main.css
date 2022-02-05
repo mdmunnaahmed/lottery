@@ -228,15 +228,15 @@ img,
 }
 
 .pt-70 {
-    padding-top: clamp(30px, 5vh, 70px);
+    padding-top: clamp(30px, vw, 70px);
 }
 
 .pt-60 {
-    padding-top: clamp(30px, 5vh, 60px);
+    padding-top: clamp(30px, vw, 60px);
 }
 
 .pt-50 {
-    padding-top: clamp(25px, 5vh, 50px);
+    padding-top: clamp(25px, vw, 50px);
 }
 
 .pt-120 {
@@ -244,15 +244,15 @@ img,
 }
 
 .pb-70 {
-    padding-bottom: clamp(30px, 5vh, 70px);
+    padding-bottom: clamp(30px, vw, 70px);
 }
 
 .pb-60 {
-    padding-bottom: clamp(30px, 5vh, 60px);
+    padding-bottom: clamp(30px, vw, 60px);
 }
 
 .pb-50 {
-    padding-bottom: clamp(25px, 5vh, 50px);
+    padding-bottom: clamp(25px, vw, 50px);
 }
 
 .pb-120 {
@@ -969,6 +969,10 @@ h6 {
     box-shadow: none;
 }
 
+.form-group .input-group-text {
+    color: #ff3e3e;
+}
+
 textarea.form--control {
     height: 120px;
 }
@@ -987,7 +991,11 @@ textarea.form--control {
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.6) !important;
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.75) !important;
 }
 
 input:autofill,
@@ -2816,6 +2824,131 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     .privacy-wrapper p {
         margin-bottom: 20px;
     }
+}
+
+.account-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 575px) {
+    .account-section {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .account-section {
+        padding: 50px 15px;
+    }
+}
+
+.account-wrappper {
+    background: rgba(2, 27, 57, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.account-form-wrapper {
+    padding: 50px;
+    height: 100%;
+    background: rgba(115, 103, 240, 0.6);
+    border-radius: 0 15px 15px 0;
+}
+
+@media (max-width: 575px) {
+    .account-form-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+.account-thumb-wrapper {
+    padding: 50px;
+}
+
+@media (max-width: 575px) {
+    .account-thumb-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+.account-thumb img {
+    width: 100%;
+}
+
+.account-switch {
+    margin-bottom: 35px;
+    text-align: right;
+}
+
+.account-switch a {
+    color: #ff3e3e;
+    font-weight: 600;
+    margin-left: 7px;
+}
+
+.account-open-options li a {
+    padding: 10px 25px;
+    display: block;
+    border-radius: 25px;
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    .account-open-options li a {
+        font-size: 14px;
+    }
+}
+
+.account-open-options li a:hover {
+    color: #fff;
+}
+
+.account-open-options li a.google {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-open-options li a.google img {
+    font-size: 17px;
+    width: 17px;
+    margin-right: 10px;
+}
+
+.account-open-options li a.facebook {
+    background: #427af5;
+}
+
+.or {
+    display: inline-block;
+    position: relative;
+}
+
+.or::before, .or::after {
+    position: absolute;
+    content: "";
+    width: 75px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    top: 49%;
+}
+
+.or::after {
+    right: calc(100% + 25px);
+}
+
+.or::before {
+    left: calc(100% + 25px);
 }
 
 /*# sourceMappingURL=main.css.map */

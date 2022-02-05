@@ -1,24 +1,24 @@
 .pt-70 {
-    padding-top: clamp(30px, 5vh, 70px);
+    padding-top: clamp(30px, vw, 70px);
 }
 .pt-60 {
-    padding-top: clamp(30px, 5vh, 60px);
+    padding-top: clamp(30px, vw, 60px);
 }
 .pt-50 {
-    padding-top: clamp(25px, 5vh, 50px);
+    padding-top: clamp(25px, vw, 50px);
 }
 .pt-120 {
     padding-top: 120px;
 }
 
 .pb-70 {
-    padding-bottom: clamp(30px, 5vh, 70px);
+    padding-bottom: clamp(30px, vw, 70px);
 }
 .pb-60 {
-    padding-bottom: clamp(30px, 5vh, 60px);
+    padding-bottom: clamp(30px, vw, 60px);
 }
 .pb-50 {
-    padding-bottom: clamp(25px, 5vh, 50px);
+    padding-bottom: clamp(25px, vw, 50px);
 }
 .pb-120 {
     padding-bottom: 120px;

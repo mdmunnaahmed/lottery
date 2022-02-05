@@ -704,3 +704,107 @@ div[class*="col"] {
     }
 }
 // Privacy Policy Section Ends Here
+
+// Account Section Starts Here
+.account-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint(max-sm) {
+        padding: 50px 20px;
+    }
+    @include breakpoint(max-xs) {
+        padding: 50px 15px;
+    }
+}
+.account-wrappper {
+    background: rgba($section-bg, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+.account-form-wrapper {
+    padding: 50px;
+    height: 100%;
+    background: rgba($primary, 0.6);
+    border-radius: 0 15px 15px 0;
+    @include breakpoint(max-sm) {
+        padding: 30px 20px;
+    }
+}
+.account-thumb-wrapper {
+    padding: 50px;
+    @include breakpoint(max-sm) {
+        padding: 30px 20px;
+    }
+}
+.account-thumb {
+    img {
+        width: 100%;
+    }
+}
+.account-switch {
+    margin-bottom: 35px;
+    text-align: right;
+    a {
+        color: $base-color;
+        font-weight: 600;
+        margin-left: 7px;
+    }
+}
+.account-open-options {
+    li {
+        a {
+            padding: 10px 25px;
+            display: block;
+            border-radius: 25px;
+            text-align: center;
+            @include breakpoint(max-xl) {
+                font-size: 14px;
+            } 
+            &:hover {
+                color: $white;
+            }
+            &.google {
+                border: 1px solid rgba($white, 0.15);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    font-size: 17px;
+                    width: 17px;
+                    margin-right: 10px;
+                }
+            }
+            &.facebook {
+                background: $facebook;
+            }
+        }
+    }
+}
+.or {
+    display: inline-block;
+    position: relative;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 75px;
+        height: 1px;
+        background: rgba($white, 0.15);
+        top: 49%;
+    }
+    &::after {
+        right: calc(100% + 25px);
+    }
+    &::before {
+        left: calc(100% + 25px);
+    }
+}
+// Account Section Ends Here

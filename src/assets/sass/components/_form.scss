@@ -17,6 +17,9 @@
         box-shadow: none;
     }
 }
+.form-group .input-group-text {
+    color: $base-color;
+}
 textarea.form--control {
     height: 120px;
 }
@@ -31,7 +34,10 @@ textarea.form--control {
     }
 }
 ::-webkit-input-placeholder {
-    color: rgba($white, 0.6) !important;
+    color: rgba($white, 0.65) !important;
+}
+::placeholder {
+    color: rgba($white, 0.75) !important;
 }
 
 input:autofill,
@@ -122,13 +128,9 @@ select {
     padding-left: rem(25px);
     input {
         display: none;
-        &:checked {
-            ~ label {
-                &::before {
-                    content: "\f14a";
-                    color: $base-color;
-                }
-            }
+        &:checked ~ label::before {
+            content: "\f14a";
+            color: $base-color;
         }
     }
     label {
