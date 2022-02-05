@@ -11,12 +11,12 @@
         padding-bottom: 80px;
     }
     @include breakpoint(max-lg) {
-        padding-top: 220px;
-        padding-bottom: 150px;
-    }
-    @include breakpoint(max-sm) {
         padding-top: 150px;
         padding-bottom: 100px;
+    }
+    @include breakpoint(max-sm) {
+        padding-top: 120px;
+        padding-bottom: 70px;
     }
     &::before {
         @extend %position-set;
@@ -145,6 +145,10 @@
     padding-top: 150px;
     padding-bottom: 100px;
     position: relative;
+    @include breakpoint(max-lg) {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
     .shape1 {
         bottom: 0;
         left: 0;

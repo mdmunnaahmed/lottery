@@ -10,7 +10,8 @@
         position: fixed;
         top: 0;
     }
-    .cmn--btn, .btn {
+    .cmn--btn,
+    .btn {
         @include breakpoint(max-lg) {
             padding: 8px 20px;
             font-size: 16px;
@@ -23,9 +24,9 @@
 }
 .header-bottom {
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
     @include breakpoint(max-lg) {
-        padding: 10px 0
+        padding: 10px 0;
     }
 }
 .header-bottom-area {

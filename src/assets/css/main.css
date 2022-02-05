@@ -227,6 +227,10 @@ img,
     transition: all ease .3s;
 }
 
+.pt-70 {
+    padding-top: clamp(30px, 5vh, 70px);
+}
+
 .pt-60 {
     padding-top: clamp(30px, 5vh, 60px);
 }
@@ -237,6 +241,10 @@ img,
 
 .pt-120 {
     padding-top: 120px;
+}
+
+.pb-70 {
+    padding-bottom: clamp(30px, 5vh, 70px);
 }
 
 .pb-60 {
@@ -251,12 +259,12 @@ img,
     padding-bottom: 120px;
 }
 
-.ticket-table .lottery-ticket, .pagination, .header-bottom-area, .menu, .result-item {
+.ticket-table .lottery-ticket, .pagination, .header-bottom-area, .menu, .result-item, .contact-info-item {
     display: flex;
     flex-wrap: wrap;
 }
 
-.video-button, .social-links li a, .how-item__icon, .lottery-number-list li {
+.video-button, .social-links li a, .how-item__icon, .lottery-number-list li, .contact-info-item .icon {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -323,11 +331,11 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(20px, 5vw, 24px);
+    font-size: clamp(20px, 4vw, 24px);
 }
 
 h5 {
-    font-size: clamp(18px, 5vw, 22px);
+    font-size: clamp(18px, 4vw, 22px);
 }
 
 h6 {
@@ -942,6 +950,10 @@ h6 {
     box-shadow: none;
 }
 
+textarea.form--control {
+    height: 120px;
+}
+
 .form--control[type="file"] {
     line-height: 25px;
     padding: 12px 25px;
@@ -956,7 +968,7 @@ h6 {
 }
 
 ::-webkit-input-placeholder {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
 
 input:autofill,
@@ -1396,14 +1408,16 @@ select.style--dark option {
 }
 
 @media (max-width: 991px) {
-    .header .cmn--btn, .header .btn {
+    .header .cmn--btn,
+  .header .btn {
         padding: 8px 20px;
         font-size: 16px;
     }
 }
 
 @media (max-width: 450px) {
-    .header .cmn--btn, .header .btn {
+    .header .cmn--btn,
+  .header .btn {
         padding: 8px 16px;
         font-size: 16px;
     }
@@ -1411,7 +1425,7 @@ select.style--dark option {
 
 .header-bottom {
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 @media (max-width: 991px) {
@@ -1752,15 +1766,15 @@ select.style--dark option {
 
 @media (max-width: 991px) {
     .banner-section {
-        padding-top: 220px;
-        padding-bottom: 150px;
+        padding-top: 150px;
+        padding-bottom: 100px;
     }
 }
 
 @media (max-width: 575px) {
     .banner-section {
-        padding-top: 150px;
-        padding-bottom: 100px;
+        padding-top: 120px;
+        padding-bottom: 70px;
     }
 }
 
@@ -1943,6 +1957,13 @@ select.style--dark option {
     padding-top: 150px;
     padding-bottom: 100px;
     position: relative;
+}
+
+@media (max-width: 991px) {
+    .inner-banner {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
 }
 
 .inner-banner .shape1 {
@@ -2253,6 +2274,16 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     z-index: 1;
 }
 
+.lottery-number-list.style--two li {
+    background: #021b39;
+    box-shadow: 0 2px 7px 2px rgba(255, 255, 255, 0.2);
+}
+
+.lottery-number-list.style--two li.active {
+    background: #ff3e3e;
+    box-shadow: 0 2px 7px 2px rgba(255, 62, 62, 0.55);
+}
+
 .lottery-number-list li {
     width: 33px;
     height: 33px;
@@ -2261,7 +2292,8 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
     font-size: 15px;
     margin-right: 5px;
     margin-bottom: 5px;
-    box-shadow: 0 2px 7px 2px rgba(255, 62, 62, 0.25);
+    box-shadow: 0 2px 7px 2px rgba(255, 62, 62, 0.55);
+    cursor: pointer;
 }
 
 .lottery-number-list li:last-child {
@@ -2459,6 +2491,7 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 
 .testimonial-slider {
     padding: 80px;
+    padding-bottom: 100px;
     background: #021b39;
     position: relative;
 }
@@ -2571,6 +2604,172 @@ div[class*="col"]:not(div[class*="col"]:last-child) .how-item::after {
 
 .team-item__content .social-links {
     margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+    .support-thumb {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.lottery-header {
+    padding: 25px 30px;
+    background: #01244e;
+}
+
+.lottery-header .lottery .icon {
+    width: 100px;
+}
+
+@media (max-width: 450px) {
+    .lottery-header .lottery .icon {
+        width: 60px;
+    }
+}
+
+.lottery-header .lottery .icon img {
+    width: 100%;
+}
+
+@media (max-width: 450px) {
+    .lottery-header .lottery .name {
+        font-size: 16px;
+    }
+}
+
+.lottery-header .lottery-price {
+    color: #ff3e3e;
+}
+
+.lottery-header .lottery-price sub {
+    font-size: 60%;
+    font-weight: 400;
+    bottom: 0;
+}
+
+.lottery-header .countdown {
+    font-size: 18px;
+}
+
+.line-wrapper li {
+    padding: 5px 15px;
+}
+
+.line-wrapper li a {
+    padding: 6px 15px;
+    display: block;
+    text-decoration: underline;
+}
+
+.line-wrapper li a.active {
+    color: #ff3e3e;
+}
+
+.lottery-item {
+    background: #01244e;
+    border-radius: 7px;
+}
+
+.lottery-item__header {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 5px;
+}
+
+.lottery-item__header p {
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.lottery-item__body {
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.lottery-item__body .lottery-number-list li {
+    margin: 7px;
+}
+
+.lottery-item__footer {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.lottery-item__footer .lottery-number-list li {
+    margin: 5px;
+}
+
+.lottery-footer {
+    padding: 15px 25px;
+    background: #01244e;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.how-play-item {
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.how-play-item .thumb {
+    width: 150px;
+    height: 130px;
+    margin: 0 auto 30px;
+}
+
+.how-play-item .thumb img {
+    width: 100%;
+}
+
+.how-play-item .title {
+    margin-bottom: 15px;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 450px;
+    filter: grayscale(1);
+}
+
+@media (max-width: 767px) {
+    .map-wrapper {
+        height: 350px;
+    }
+}
+
+.map-wrapper .map {
+    height: 100%;
+    width: 100%;
+}
+
+.contact-info-item {
+    align-items: center;
+}
+
+.contact-info-item .icon {
+    width: 80px;
+    aspect-ratio: 1;
+    font-size: 26px;
+    color: #ff3e3e;
+    border-right: 3px solid #ff3e3e;
+    background: #01244e;
+    border-radius: 7px;
+}
+
+.contact-info-item .content {
+    width: calc(100% - 80px);
+    padding-left: 25px;
+}
+
+.contact-info-item .content .title {
+    margin-bottom: 12px;
+}
+
+.contact-info-item .content a {
+    display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

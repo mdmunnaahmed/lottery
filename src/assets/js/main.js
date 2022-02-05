@@ -175,14 +175,40 @@ $(".video-button, .video").magnificPopup({
 });
 
 // Lottery Countdown
-$("#lottery01").countdown(
-    {
-        date: "06/15/2022 23:59:59",
-        offset: +6,
-        day: "Day",
-        days: "Days",
+$("[data-countdown]").each(function () {
+    var $this = $(this),
+        finalDate = $(this).data("countdown");
+    $this
+        .countdown(finalDate)
+        .on("update.countdown", function (event) {
+            var format = "%D days %H hr : %M mn : %S sec";
+            $(this).html(event.strftime(format));
+        })
+        .on("finish.countdown", function (event) {
+            var expireData = $(this).data("title");
+            $(this).html(expireData).parent().addClass("disabled");
+        });
+});
+
+new AirDatepicker("#el", {
+    dateFormat(date) {
+        return date.toLocaleString("en", {
+            year: "numeric",
+            day: "2-digit",
+            month: "long",
+            language: "en",
+            autoClose: true,
+        });
     },
-    function () {
-        alert("Done!");
-    }
-);
+});
+
+// Lottery Number Pick
+$(".lottery-number-list li").on("click", function () {
+    // var lenth01 = $(".lottery-number-list li.active").length;
+    // console.log(lenth01);
+    // if (lenth01 + 1 > 5) {
+    //     alert("You can select upto 5 Numbers only");
+    // } else {
+    $(this).toggleClass("active");
+    // }
+});

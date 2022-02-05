@@ -623,32 +623,6 @@
 @@include('../partial-html/_footer.html')
 @@include('../partial-html/_template-bottom.html')
 
-<script>
-    // with short level
-    $('[data-countdown]').each(function () {
-        var $this = $(this), finalDate = $(this).data('countdown');
-        $this.countdown(finalDate).on('update.countdown', function (event) {
-            var format = '%D days %H hr : %M mn : %S sec';
-            $(this).html(event.strftime(format));
-        }).on('finish.countdown', function (event) {
-            var expireData = $(this).data('title');
-            $(this).html(expireData).parent().addClass('disabled');
-        });
-    });
-
-    new AirDatepicker('#el', {
-        dateFormat(date) {
-            return date.toLocaleString('en', {
-                year: 'numeric',
-                day: '2-digit',
-                month: 'long',
-                language: 'en',
-                autoClose: true,
-            });
-        }
-    })
-
-</script>
 </body>
 
 </html>

@@ -1,16 +1,17 @@
 <!-- meta tags and other links -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LottoLand - Online Lottery HTML Template</title>
+    <title>Lotterie - Online Lottery HTML Template</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
     <!-- bootstrap 5  -->
     <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
     <!-- Icon Link  -->
-    <link rel="stylesheet" href="assets/css/all.min.css"> 
-    <link rel="stylesheet" href="assets/css/line-awesome.min.css"> 
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="assets/css/lib/animate.css">
 
     <!-- Plugin Link -->
@@ -21,6 +22,7 @@
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
     <!-- Overlay -->
     <div class="overlay"></div>
@@ -37,7 +39,10 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="faq.html">Faq</a>
+                        <a href="lottery.html">Lottery</a>
+                    </li>
+                    <li>
+                        <a href="lottery-results.html">Lottery Results</a>
                     </li>
                     <li>
                         <a href="#0">Pages</a>
@@ -46,7 +51,7 @@
                                 <a href="dashboard.html">User Dashboard</a>
                             </li>
                             <li>
-                                <a href="policy.html">Privacy Policy</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
                             </li>
                             <li>
                                 <a href="terms-conditions.html">Terms & Conditions</a>
@@ -57,13 +62,6 @@
                             <li>
                                 <a href="sign-up.html">Sign Up</a>
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </li>
                     <li>
@@ -754,32 +752,6 @@
 <!-- Main js -->
 <script src="assets/js/main.js"></script>
 
-<script>
-    // with short level
-    $('[data-countdown]').each(function () {
-        var $this = $(this), finalDate = $(this).data('countdown');
-        $this.countdown(finalDate).on('update.countdown', function (event) {
-            var format = '%D days %H hr : %M mn : %S sec';
-            $(this).html(event.strftime(format));
-        }).on('finish.countdown', function (event) {
-            var expireData = $(this).data('title');
-            $(this).html(expireData).parent().addClass('disabled');
-        });
-    });
-
-    new AirDatepicker('#el', {
-        dateFormat(date) {
-            return date.toLocaleString('en', {
-                year: 'numeric',
-                day: '2-digit',
-                month: 'long',
-                language: 'en',
-                autoClose: true,
-            });
-        }
-    })
-
-</script>
 </body>
 
 </html>

@@ -17,6 +17,9 @@
         box-shadow: none;
     }
 }
+textarea.form--control {
+    height: 120px;
+}
 .form--control[type="file"] {
     line-height: 25px;
     padding: 12px 25px;
@@ -28,7 +31,7 @@
     }
 }
 ::-webkit-input-placeholder {
-    color: $white !important;
+    color: rgba($white, 0.6) !important;
 }
 
 input:autofill,

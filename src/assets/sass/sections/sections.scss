@@ -235,6 +235,16 @@ div[class*="col"] {
     }
 }
 .lottery-number-list {
+    &.style--two {
+        li {
+            background: $section-bg;
+            box-shadow: 0 2px 7px 2px rgba($white, 0.2);
+            &.active {
+                background: $base-color;
+                box-shadow: 0 2px 7px 2px rgba($base-color, 0.55);
+            }
+        }
+    }
     li {
         width: 33px;
         height: 33px;
@@ -244,7 +254,8 @@ div[class*="col"] {
         font-size: 15px;
         margin-right: 5px;
         margin-bottom: 5px;
-        box-shadow: 0 2px 7px 2px rgba($base-color, 0.25);
+        box-shadow: 0 2px 7px 2px rgba($base-color, 0.55);
+        cursor: pointer;
         &:last-child {
             margin-right: 0;
             margin-bottom: 0;
@@ -422,6 +433,7 @@ div[class*="col"] {
 // Testimonial Section Starts Here
 .testimonial-slider {
     padding: 80px;
+    padding-bottom: 100px;
     background: $section-bg;
     position: relative;
     @include breakpoint(max-lg) {
@@ -516,3 +528,156 @@ div[class*="col"] {
     }
 }
 // Team Section Ends Here
+
+// Support Section Starts Here
+.support-thumb {
+    @include breakpoint(max-lg) {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+// Support Section Ends Here
+
+// Lottery Section Starts Here
+.lottery-header {
+    padding: 25px 30px;
+    background: $body-bg;
+    .lottery {
+        .icon {
+            width: 100px;
+            @include breakpoint(max-xs) {
+                width: 60px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .name {
+            @include breakpoint(max-xs) {
+                font-size: 16px;
+            }
+        }
+    }
+    .lottery-price {
+        color: $base-color;
+        sub {
+            font-size: 60%;
+            font-weight: 400;
+            bottom: 0;
+        }
+    }
+    .countdown {
+        font-size: 18px;
+    }
+}
+.line-wrapper {
+    li {
+        padding: 5px 15px;
+        a {
+            padding: 6px 15px;
+            display: block;
+            text-decoration: underline;
+            &.active {
+                color: $base-color;
+            }
+        }
+    }
+}
+.lottery-item {
+    background: $body-bg;
+    border-radius: 7px;
+    &__header {
+        text-align: center;
+        padding: 20px;
+        padding-bottom: 0;
+        border-radius: 5px;
+        p {
+            border-radius: 5px;
+            padding: 6px 10px;
+        }
+    }
+    &__body {
+        padding: 20px;
+        margin: 15px 0;
+        .lottery-number-list {
+            li {
+                margin: 7px;
+            }
+        }
+    }
+    &__footer {
+        padding: 20px;
+        padding-top: 0;
+        // background: $section-bg;
+        .lottery-number-list {
+            li {
+                margin: 5px;
+            }
+        }
+    }
+}
+.lottery-footer {
+    padding: 15px 25px;
+    background: $body-bg;
+    border-radius: 5px;
+    font-size: 18px;
+}
+// Lottery Section Ends Here
+
+// How Play Section Starts Here
+.how-play-item {
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+    .thumb {
+        width: 150px;
+        height: 130px;
+        margin: 0 auto 30px;
+        img {
+            width: 100%;
+        }
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+}
+// How Play Section Ends Here
+.map-wrapper {
+    width: 100%;
+    height: 450px;
+    filter: grayscale(1);
+    @include breakpoint(max-md) {
+        height: 350px;
+    }
+    .map {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+// Contact Section Starts Here
+.contact-info-item {
+    @extend %flex;
+    align-items: center;
+    .icon {
+        width: 80px;
+        aspect-ratio: 1;
+        @extend %flex-center;
+        font-size: 26px;
+        color: $base-color;
+        border-right: 3px solid rgba($base-color, 1.2);
+        background: $body-bg;
+        border-radius: 7px;
+    }
+    .content {
+        width: calc(100% - 80px);
+        padding-left: 25px;
+        .title {
+            margin-bottom: 12px;
+        }
+        a {
+            display: block;
+        }
+    }
+}
+// Contact Section Ends Here
